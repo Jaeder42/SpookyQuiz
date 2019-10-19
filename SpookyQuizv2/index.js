@@ -87,12 +87,14 @@ io.on('connection', function (socket) {
 
     socket.on('client_answer', function (answer) {
         // handle userID and questionIndex
-        if(answer.option == currentQuestionCorrectIndex) {
+        if(answer.option === currentQuestionCorrectIndex) {
             players[answer.userName].points += 1;
         } else {
             players[answer.userName].lives -= 1;
             if(players[answer.userName].lives == 0) {
                 io.emit('game_over', socket.id);
+            } else {
+                io.emit('lost_life', socket.id);
             }
         }
     });

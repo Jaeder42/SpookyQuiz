@@ -1,125 +1,502 @@
-{
-    "response_code": 0,
-    "results": [
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "What is the real name of &quot;moot&quot;, founder of the imageboard 4chan?",
-            "correct_answer": "Christopher Poole",
-            "incorrect_answers": [
-                "Mark Zuckerberg",
-                "Allison Harvard",
-                "Catie Wayne"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "What is Doug Walker&#039;s YouTube name?",
-            "correct_answer": "The Nostalgia Critic",
-            "incorrect_answers": [
-                "The Angry Video Game Nerd",
-                "AngryJoeShow",
-                "The Cinema Snob"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "Paul McCartney has always used his middle name. What is his real first name? ",
-            "correct_answer": "James",
-            "incorrect_answers": [
-                "John",
-                "Jack",
-                "Justin"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "Where was Kanye West born?",
-            "correct_answer": "Atlanta, Georgia",
-            "incorrect_answers": [
-                "Chicago, Illinois",
-                "Los Angeles, California",
-                "Detroit, Michigan"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "Which famous New York Yankees outfielder did Marilyn Monroe marry?",
-            "correct_answer": "Joe DiMaggio",
-            "incorrect_answers": [
-                "Tino Martinez",
-                "Babe Ruth",
-                "Mason Williams"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "What was the name of Marilyn Monroe&#039;s first husband?",
-            "correct_answer": "James Dougherty",
-            "incorrect_answers": [
-                "Joe Dimaggio",
-                "Kirk Douglas",
-                "Arthur Miller"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "Which radio personality calls himself &quot;The King of All Media&quot;?",
-            "correct_answer": "Howard Stern",
-            "incorrect_answers": [
-                "Rush Limbaugh",
-                "Pete Tong",
-                "Ryan Seacrest"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "Nikki Diamond portrayed which Gladiator in the 1992 TV show &quot;Gladiators&quot;?",
-            "correct_answer": "Scorpio",
-            "incorrect_answers": [
-                "Jet",
-                "Nightshade",
-                "Falcon"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "Which American celebrity died in 1977 playing golf in La Moraleja, Madrid?",
-            "correct_answer": "Bing Crosby",
-            "incorrect_answers": [
-                "Elvis Presley",
-                "Charlie Chaplin",
-                "Groucho Marx"
-            ]
-        },
-        {
-            "category": "Celebrities",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "Which TV chef wrote an autobiography titled &quot;Humble Pie&quot;?",
-            "correct_answer": "Gordon Ramsay",
-            "incorrect_answers": [
-                "Jamie Oliver",
-                "Ainsley Harriott",
-                "Antony Worrall Thompson"
-            ]
-        }
-    ]
-}
+[
+    {
+        "response_code": 0,
+        "results": [
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What is the real name of &quot;moot&quot;, founder of the imageboard 4chan?",
+                "correct_answer": "Christopher Poole",
+                "incorrect_answers": [
+                    "Mark Zuckerberg",
+                    "Allison Harvard",
+                    "Catie Wayne"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What is Doug Walker&#039;s YouTube name?",
+                "correct_answer": "The Nostalgia Critic",
+                "incorrect_answers": [
+                    "The Angry Video Game Nerd",
+                    "AngryJoeShow",
+                    "The Cinema Snob"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Paul McCartney has always used his middle name. What is his real first name? ",
+                "correct_answer": "James",
+                "incorrect_answers": [
+                    "John",
+                    "Jack",
+                    "Justin"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Where was Kanye West born?",
+                "correct_answer": "Atlanta, Georgia",
+                "incorrect_answers": [
+                    "Chicago, Illinois",
+                    "Los Angeles, California",
+                    "Detroit, Michigan"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which famous New York Yankees outfielder did Marilyn Monroe marry?",
+                "correct_answer": "Joe DiMaggio",
+                "incorrect_answers": [
+                    "Tino Martinez",
+                    "Babe Ruth",
+                    "Mason Williams"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What was the name of Marilyn Monroe&#039;s first husband?",
+                "correct_answer": "James Dougherty",
+                "incorrect_answers": [
+                    "Joe Dimaggio",
+                    "Kirk Douglas",
+                    "Arthur Miller"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which radio personality calls himself &quot;The King of All Media&quot;?",
+                "correct_answer": "Howard Stern",
+                "incorrect_answers": [
+                    "Rush Limbaugh",
+                    "Pete Tong",
+                    "Ryan Seacrest"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Nikki Diamond portrayed which Gladiator in the 1992 TV show &quot;Gladiators&quot;?",
+                "correct_answer": "Scorpio",
+                "incorrect_answers": [
+                    "Jet",
+                    "Nightshade",
+                    "Falcon"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which American celebrity died in 1977 playing golf in La Moraleja, Madrid?",
+                "correct_answer": "Bing Crosby",
+                "incorrect_answers": [
+                    "Elvis Presley",
+                    "Charlie Chaplin",
+                    "Groucho Marx"
+                ]
+            },
+            {
+                "category": "Celebrities",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which TV chef wrote an autobiography titled &quot;Humble Pie&quot;?",
+                "correct_answer": "Gordon Ramsay",
+                "incorrect_answers": [
+                    "Jamie Oliver",
+                    "Ainsley Harriott",
+                    "Antony Worrall Thompson"
+                ]
+            }
+        ]
+    },
+    {
+        "response_code": 0,
+        "results": [
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "What was the name of the WWF professional wrestling tag team made up of the wrestlers Ax and Smash?",
+                "correct_answer": "Demolition",
+                "incorrect_answers": [
+                    "The Dream Team",
+                    "The Bushwhackers",
+                    "The British Bulldogs"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "In past times, what would a gentleman keep in his fob pocket?",
+                "correct_answer": "Watch",
+                "incorrect_answers": [
+                    "Money",
+                    "Keys",
+                    "Notebook"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "What does the &#039;S&#039; stand for in the abbreviation SIM, as in SIM card? ",
+                "correct_answer": "Subscriber",
+                "incorrect_answers": [
+                    "Single",
+                    "Secure",
+                    "Solid"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "What geometric shape is generally used for stop signs?",
+                "correct_answer": "Octagon",
+                "incorrect_answers": [
+                    "Hexagon",
+                    "Circle",
+                    "Triangle"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "What is on display in the Madame Tussaud&#039;s museum in London?",
+                "correct_answer": "Wax sculptures",
+                "incorrect_answers": [
+                    "Designer clothing",
+                    "Unreleased film reels",
+                    "Vintage cars"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "What was the first ever London Underground line to be built?",
+                "correct_answer": "Metropolitan Line",
+                "incorrect_answers": [
+                    "Circle Line",
+                    "Bakerloo Line",
+                    "Victoria Line"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "How tall is the Burj Khalifa?",
+                "correct_answer": "2,722 ft",
+                "incorrect_answers": [
+                    "2,717 ft",
+                    "2,546 ft",
+                    "3,024 ft"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "What zodiac sign is represented by a pair of scales?",
+                "correct_answer": "Libra",
+                "incorrect_answers": [
+                    "Aries",
+                    "Capricorn",
+                    "Sagittarius"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "The likeness of which president is featured on the rare $2 bill of USA currency?",
+                "correct_answer": "Thomas Jefferson",
+                "incorrect_answers": [
+                    "Martin Van Buren",
+                    "Ulysses Grant",
+                    "John Quincy Adams"
+                ]
+            },
+            {
+                "category": "General Knowledge",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "When someone is inexperienced they are said to be what color?",
+                "correct_answer": "Green",
+                "incorrect_answers": [
+                    "Red",
+                    "Blue",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "response_code": 0,
+        "results": [
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which song by Swedish electronic musician Avicii samples the song &quot;Something&#039;s Got A Hold On Me&quot; by Etta James?",
+                "correct_answer": "Levels",
+                "incorrect_answers": [
+                    "Fade Into Darkness",
+                    "Silhouettes",
+                    "Seek Bromance"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What animal is featured on the cover of English electronic music group The Prodigy&#039;s album, &quot;The Fat of the Land&quot;?",
+                "correct_answer": "Crab",
+                "incorrect_answers": [
+                    "Fox",
+                    "Elephant",
+                    "Tiger"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which of these is NOT a name of an album released by American rapper Pitbull?",
+                "correct_answer": "Welcome to Miami",
+                "incorrect_answers": [
+                    "Dale",
+                    "Global Warming",
+                    "Armando"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What is Brian May&#039;s guitar called?",
+                "correct_answer": "Red Special",
+                "incorrect_answers": [
+                    "Blue Special",
+                    "Green Special",
+                    "Yellow Special"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What musician made the song &quot;Fuckin` Perfect&quot; in 2010?",
+                "correct_answer": "P!nk",
+                "incorrect_answers": [
+                    "Mitis",
+                    "Adam lambert",
+                    "Koven"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "When did The Beatles release the LP &quot;Please Please Me&quot;?",
+                "correct_answer": "1963",
+                "incorrect_answers": [
+                    "1970",
+                    "1960",
+                    "1969"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which of the following bands is Tom DeLonge not a part of?",
+                "correct_answer": "+44",
+                "incorrect_answers": [
+                    "Box Car Racer",
+                    "Blink-182",
+                    "Angels &amp; Airwaves"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "&quot;Make You Feel My Love&quot; was originally written and performed by which singer-songwriter?",
+                "correct_answer": "Bob Dylan",
+                "incorrect_answers": [
+                    "Elvis",
+                    "Adele",
+                    "Billy Joel"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which of these songs is NOT in The Beatles&#039; album &quot;Sgt. Pepper&#039;s Lonely Hearts Club Band&quot;?",
+                "correct_answer": "Strawberry Fields Forever",
+                "incorrect_answers": [
+                    "Getting Better",
+                    "Fixing a Hole",
+                    "Lucy in the Sky with Diamonds"
+                ]
+            },
+            {
+                "category": "Entertainment: Music",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "&#039;74&ndash;&#039;75 is a 1993 single from the album Ring by what American band?",
+                "correct_answer": "The Connells",
+                "incorrect_answers": [
+                    "R.E.M.",
+                    "The Ocean Blue",
+                    "The Bangles"
+                ]
+            }
+        ]
+    },
+    {
+        "response_code": 0,
+        "results": [
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What was the character Kirby originally going to be named?",
+                "correct_answer": "Popopo",
+                "incorrect_answers": [
+                    "Dedede",
+                    "Waddle Dee",
+                    "Prince Puff"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "How many zombies need to be killed to get the &quot;Zombie Genocider&quot; achievement in Dead Rising (2006)?",
+                "correct_answer": "53,594",
+                "incorrect_answers": [
+                    "53,593",
+                    "53,595",
+                    "53,596"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which musical artist was NOT featured as playable avatars in the game &quot;DJ Hero&quot;?",
+                "correct_answer": "Dr. Dre",
+                "incorrect_answers": [
+                    "DJ Shadow",
+                    "Daft Punk",
+                    "Grandmaster Flash"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "In the Mass Effect trilogy, who is the main protagonist?",
+                "correct_answer": "Shepard",
+                "incorrect_answers": [
+                    "Mordin",
+                    "Garrus",
+                    "Thane"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "In Overwatch, how old is Reinhardt Wilhelm?",
+                "correct_answer": "61",
+                "incorrect_answers": [
+                    "59",
+                    "65",
+                    "62"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "In &quot;The Binding of Isaac&quot;, what is the name of the final boss that you fight in The Void?",
+                "correct_answer": "Delirium",
+                "incorrect_answers": [
+                    "Mega Satan",
+                    "Hush",
+                    "The Lamb"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "In &quot;Call of Duty: Black Ops III&quot; Zombies, what does completing all the main easter eggs reward you with?",
+                "correct_answer": "1,000,000 XP",
+                "incorrect_answers": [
+                    "Juggernog at the start of each game",
+                    "50 Liquid Diviniums",
+                    "All three options."
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What was the main currency in Club Penguin?",
+                "correct_answer": "Coins",
+                "incorrect_answers": [
+                    "Stamps",
+                    "Tickets",
+                    "Gems"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What is the main character&#039;s name in &quot;Braid&quot;?",
+                "correct_answer": "Tim",
+                "incorrect_answers": [
+                    "Boregard",
+                    "James",
+                    "Jackson"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "Which car is NOT featured in &quot;Need for Speed: Hot Pursuit 2&quot;?",
+                "correct_answer": "Toyota MR2",
+                "incorrect_answers": [
+                    "Ford Crown Victoria",
+                    "BMW Z8",
+                    "McLaren F1"
+                ]
+            }
+        ]
+    }
+]

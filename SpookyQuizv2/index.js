@@ -1,19 +1,23 @@
-import { userInfo } from 'os';
-
 var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
 const players = {};
 
-let questions = require('./questions.json');
+let quizes = require('./questions.json');
+let quizIndex = 0;
 let questionIndex = 0;
-let currentQuestionCorrectIndex = 0;
-let numberOfQuestions = Object.keys(questions.results).length;
+let currentQuestionCorrectIndex = -1;
+let numberOfQuestions = Object.keys(quizes[0].results).length;
 //console.log('Number of quesitons: ' + numberOfQuestions);
+let currentQuiz = null;
+
+function getQuiz(index) {
+    return quizes[index];
+}
 
 function nextQuestion(index) {
-    let currentQuestion = questions.results[index];
+    let currentQuestion = currentQuiz.results[index];
     let question = currentQuestion.question;
     console.log('New Question: ' + question);
     let answers = [];
@@ -34,7 +38,7 @@ function nextRound() {
     io.emit('new_round', nextQuestion(questionIndex));
     setTimeout(function () {
         console.log('Round is over.');
-        io.emit('round_result', currentQuestionCorrectIndex);
+        io.emit('round_result', {currentQuestionCorrectIndex, players});
         questionIndex++;
         if (questionIndex == numberOfQuestions) {
             // game over!
@@ -73,7 +77,8 @@ io.on('connection', function (socket) {
         io.emit('player_joined', username);
     });
 
-    socket.on('new_game', function () {
+    socket.on('new_game', function (category) {
+        currentQuiz = getQuiz(category);
         io.emit('get_ready', players);
         setTimeout(function () {
             nextRound();
@@ -81,7 +86,15 @@ io.on('connection', function (socket) {
     });
 
     socket.on('client_answer', function (answer) {
-        // handle userID and questionID
+        // handle userID and questionIndex
+        if(answer.option == currentQuestionCorrectIndex) {
+            players[answer.userName].points += 1;
+        } else {
+            players[answer.userName].lives -= 1;
+            if(players[answer.userName].lives == 0) {
+                io.emit('game_over', socket.id);
+            }
+        }
     });
 
     /*

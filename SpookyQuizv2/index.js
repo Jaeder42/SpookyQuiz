@@ -76,7 +76,7 @@ io.on("connection", function(socket) {
   socket.on("join_game", function(username) {
     console.log("player " + username + " joined the game");
     players[username] = { points: 0, lives: 3, ...players[username] };
-    io.emit("player_joined", username);
+    io.emit("player_joined", players);
   });
 
   socket.on("new_game", function(category) {

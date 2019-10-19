@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Card, Button } from "@material-ui/core";
 import styled from "styled-components";
+import { Socket } from "../utils/socket";
 
 export const View = () => {
-  const question = {
-    text: "One of these is the correct answer, which one?",
-    options: [
-      { id: 0, text: "Answer 1" },
-      { id: 1, text: "Answer 2" },
-      { id: 2, text: "Answer 3" },
-      { id: 3, text: "Answer 4", correct: true }
-    ]
-  };
-
+  const [socket, setSocket] = useState(null);
+  useEffect(() => {
+    setSocket(Socket());
+  }, []);
+  useEffect(() => {
+    if (socket != null) {
+    }
+  }, [socket]);
   return (
     <Wrapper>
       <Container>
         <Card>
           <Wrapper>
-            <h2>{question.text}</h2>
-            {question.options.map(option => (
-              <Option variant="contained" color={"secondary"}>
-                {option.text}
-              </Option>
-            ))}
+            <Button
+              onClick={() => {
+                socket.emit("start_game", 0);
+              }}
+            >
+              START
+            </Button>
           </Wrapper>
         </Card>
       </Container>

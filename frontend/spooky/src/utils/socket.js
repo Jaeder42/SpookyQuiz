@@ -1,5 +1,5 @@
 import io from "socket.io-client";
-const url = "localhost:3001";
+const url = "192.168.1.14:3001";
 
 export const Socket = room => {
   return io(url + room);

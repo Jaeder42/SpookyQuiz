@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Card, Button } from "@material-ui/core";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Socket } from "../utils/socket";
 import { useCookies } from "react-cookie";
 
@@ -14,6 +14,7 @@ export const Play = () => {
   const [result, setResult] = useState(null);
   const [lives, setLives] = useState(3);
   const [timer, setTimer] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -51,32 +52,45 @@ export const Play = () => {
       });
       socket.on("game_over", () => {
         console.log("LOOOOSER");
+        setGameOver(true);
       });
       socket.on("lost_life", () => {
         setLives(lives - 1);
       });
 
       socket.on("round_result", ({ currentQuestionCorrectIndex, players }) => {
-        // if (!userAnswer) {
-        //   socket.emit("client_answer", {
-        //     userName: cookies.userName,
-        //     option: null
-        //   });
-        // }
-        setLives(players[cookies.userName].lives);
+        if (players[cookies.userName]) {
+          setLives(players[cookies.userName].lives);
+        }
         setCorrectAnswer(currentQuestionCorrectIndex);
         setPhase("pause");
       });
     }
   }, [socket]);
-
+  if (gameOver && phase !== "game_over") {
+    // if (true) {
+    return (
+      <Wrapper>
+        <Container>
+          <Card>
+            <Wrapper>
+              <h1>GAME OVER!</h1>
+              <ZombieContainer>
+                <Zombie src={require("../assets/zombie.png")} />
+              </ZombieContainer>
+            </Wrapper>
+          </Card>
+        </Container>
+      </Wrapper>
+    );
+  }
   if (phase === "answering" && question) {
     return (
       <Wrapper>
         <Container>
           <Card>
             <Wrapper>
-              <h2>{question.text}</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: question.text }}></h2>
               {question.options.map(option => (
                 <Option
                   variant="contained"
@@ -108,7 +122,7 @@ export const Play = () => {
         <Container>
           <Card>
             <Wrapper>
-              <h2>{question.text}</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: question.text }} />
               {question.options.map(option => (
                 <Option
                   variant="contained"
@@ -144,7 +158,21 @@ export const Play = () => {
       <Wrapper>
         <Container>
           <Card>
-            <Wrapper>{JSON.string(result)}</Wrapper>
+            <PlayerContainer>
+              {Object.keys(result).map(key => (
+                <Player>
+                  <PlayerText>
+                    <div>{key}</div>
+                    <div>Score: {result[key].points}</div>
+                    {result[key].lives < 1 && (
+                      <div>
+                        <h1>dead</h1>
+                      </div>
+                    )}
+                  </PlayerText>
+                </Player>
+              ))}
+            </PlayerContainer>
           </Card>
         </Container>
       </Wrapper>
@@ -162,10 +190,33 @@ export const Play = () => {
   }
 };
 
+const rotate = keyframes`
+  0% {
+    transform: rotate(10deg);
+  }
+  
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+`;
+
 const Wrapper = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+`;
+const ZombieContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const Zombie = styled.img`
+  width: 150px;
+  height: auto;
+  animation: ${rotate} 1s linear infinite;
 `;
 
 const Option = styled(Button)`
@@ -181,4 +232,20 @@ const HeartsRow = styled.div`
   align-items: center;
   justify-content: center;
   color: red;
+`;
+const Player = styled.div`
+  margin: 10px 10px;
+  padding: 10px;
+  background-color: #212121;
+  border-radius: 10px;
+`;
+
+const PlayerText = styled.span`
+  color: orange;
+  font-size: 20px;
+`;
+const PlayerContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 `;

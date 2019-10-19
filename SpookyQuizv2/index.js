@@ -68,6 +68,7 @@ http.listen(3001, function() {
 
 io.on("connection", function(socket) {
   console.log("player connected to service");
+  io.emit("player_joined", players);
 
   socket.on("disconnect", function() {
     console.log("player disconnected");
@@ -91,13 +92,17 @@ io.on("connection", function(socket) {
     // handle userID and questionIndex
     console.log(answer);
     if (+answer.option === +currentQuestionCorrectIndex) {
-      players[answer.userName].points += 1;
+      if (players[answer.userName]) {
+        players[answer.userName].points += 1;
+      }
     } else {
-      players[answer.userName].lives -= 1;
-      if (players[answer.userName].lives <= 0) {
-        io.emit("game_over", socket.id);
-      } else {
-        // io.emit("lost_life", socket.id);
+      if (players[answer.userName]) {
+        players[answer.userName].lives -= 1;
+        if (players[answer.userName].lives <= 0) {
+          socket.emit("game_over");
+        } else {
+          // io.emit("lost_life", socket.id);
+        }
       }
     }
   });

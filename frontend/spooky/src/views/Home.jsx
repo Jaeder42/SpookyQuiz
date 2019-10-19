@@ -15,12 +15,12 @@ export const Home = ({ history }) => {
   };
 
   const goToRoom = () => {
-    history.push(`/play/${roomCode}`);
+    history.push(`/play/HacKIsJoy`);
   };
 
-  const handleChangeRoomCode = val => {
-    setRoomCode(val.target.value);
-  };
+  // const handleChangeRoomCode = val => {
+  //   setRoomCode(val.target.value);
+  // };
 
   return (
     <Wrapper>
@@ -37,13 +37,7 @@ export const Home = ({ history }) => {
               onChange={handleChangeName}
               margin="normal"
             />
-            <br />
-            <TextField
-              label="Room code"
-              value={roomCode}
-              onChange={handleChangeRoomCode}
-              margin="normal"
-            />
+
             <br />
 
             <Button
